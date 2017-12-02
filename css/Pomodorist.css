@@ -1,34 +1,71 @@
-            #title {
-                color: red;
-                position: ;
-                left: 50px;
-                top: 35px;
-            }
+                            #title {
+                                color: white;
+                                position: ;
+                                left: 50px;
+                                top: 35px;
+                            }
 
-            #startbtn {
-
-                color: red;
-                border-radius: 4px;
-                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-            }
+                            #start-btn {
 
 
-            #endbtn {
-                color: red;
-                border-radius: 4px;
-                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-            }
+                                background-color: #e94443;
+                                margin-bottom: 10%;
+                            }
 
-            #resetbtn {
-                color: red;
-                border-radius: 4px;
-                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-            }
 
-            body {
-                background: powderblue;
-                font-family: "Open Sans";
-                font-weight: 400;
-                padding-top: 30px;
-                text-align: center;
-            }
+                            #stop-btn {
+                                background-color: #e94443;
+                                margin-bottom: 10%;
+                            }
+
+                            #reset-btn {
+
+                                background-color: #e94443;
+                                margin-bottom: 10%;
+                            }
+
+
+                            .wrapper {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            #Pomodoro {
+                                max-height: 100%;
+                                max-width: 100%;
+                                padding-top: 30px;
+                                margin-bottom: 50%;
+                                height: 600px;
+                                width: 400px;
+                                background-image: linear-gradient(45deg, #d62b31 0%, #f75851 100%);
+                                ;
+                                box-shadow: 10px 10px 10px 5px #888888;
+                            }
+
+                            #color {
+                                background: #FF7F50;
+                                opacity: 4.0;
+                                height: auto;
+                                width: 400px;
+                            }
+
+                            h1 {
+                                font: 50px/1.5 'Pacifico', Helvetica, sans-serif;
+                                color: #fff;
+                                text-align: center;
+                                justify-content: center;
+                                padding-bottom: 40px;
+                            }
+
+                            #circle {
+                                position: flex;
+                                text-align: center;
+                                justify-content: center;
+                                padding-top: 10px;
+                                font: 50px/1.5 'Pacifico', Helvetica, sans-serif;
+                                color: #fff;
+                                text-align: center;
+                                justify-content: center;
+                                padding-bottom: 40px;
+                            }
