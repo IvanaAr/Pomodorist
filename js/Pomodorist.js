@@ -1,94 +1,81 @@
-var minute = 0; //kasnije podesiti minute na 25
-var seconds = 5;
-var totalSeconds = 5; //kasnije podesiti minute na 1500
-// var timer = null;
+//funkcija za tajmer
+var intervalId = null;
+var minute = 25; //kasnije podesiti minute na 25
+var seconds = 00;
+var totalSeconds = 1500; //kasnije podesiti minute na 1500
+var type = 1;
+var started = 0;
+
 
 function startTimer() {
-    // if (timer !== null) {;
 
-    //     clearInterval(intervalId);
-    // }
 
 
     --totalSeconds;
 
-    minute = Math.floor((totalSeconds - 1) / 60);
+    if (totalSeconds == 0) {
+        if (type == 0) {
+            totalSeconds = 1500;
+            type = type + 1;
+            document.getElementById("myUL").innerHTML = "Break started";
+
+        } else {
+            totalSeconds = 300;
+            type = type - 1;
+            document.getElementById("myUL").innerHTML = "Break ended";
+
+        }
+    }
+
+
+    minute = Math.floor(totalSeconds / 60);
     seconds = totalSeconds - (minute * 60);
+
 
 
     document.getElementById("minute").innerHTML = minute;
     document.getElementById("seconds").innerHTML = seconds;
-
-
-
-    if (totalSeconds == 0) {
-
-
-        clearInterval(intervalId);
-
-
-
-        startBreak();
-
-    }
-
-
 }
 
+
+
+
 document.getElementById('start-btn').addEventListener('click', () => {
-    intervalId = setInterval(startTimer, 1500);
+    if (started == 0) {
+        started = 1;
+        intervalId = setInterval(startTimer, 10);
+    }
+
 })
 
 document.getElementById('stop-btn').addEventListener('click', () => {
-    if (intervalId)
-        clearInterval(intervalId);
+
+    if (intervalId && started == 1)
+        started = 0;
+    clearInterval(intervalId);
 });
 
 
 document.getElementById('reset-btn').addEventListener('click', () => {
-    totalSeconds = 5; //podesiti sekunde na 1500
-
-    document.getElementById("minute").innerHTML = '0';
-    document.getElementById("seconds").innerHTML = '5';
+    clearInterval(intervalId);
+    totalSeconds = 1500; //podesiti sekunde na 1500
+    type = 1;
+    document.getElementById("minute").innerHTML = '25';
+    document.getElementById("seconds").innerHTML = '00';
 });
 
 
-var breakminute = 0;
-var breakseconds = 5;
-var totalbreakseconds = 5;
+// funkcija za to do list
+function newElement() {
+    var item = document.getElementById('todoInput').value;
+    var text = document.createTextNode(item);
+    var checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.name = "name";
+    checkbox.value = "value";
+    var newItem = document.createElement("div");
 
-function startBreak() {
-
-
-    --totalbreakseconds;
-    intervalId = setInterval(startBreak, 1500);
-
-    breakminute = Math.floor((totalbreakseconds - 1) / 60);
-    breakseconds = totalbreakseconds - (breakminute * 60);
-
-
-    document.getElementById("minute").innerHTML = breakminute;
-    document.getElementById("seconds").innerHTML = breakseconds;
-
-    if (totalbreakseconds == 0) {
-
-        clearInterval(intervalId);
-        startTimer();
-
-    }
-
-
-
-    document.getElementById('stop-btn').addEventListener('click', () => {
-        if (intervalId)
-            clearInterval(intervalId);
-    });
-
-
-    document.getElementById('reset-btn').addEventListener('click', () => {
-        totalbreakseconds = 5; //podesiti sekunde na 1500
-
-        document.getElementById("minute").innerHTML = '0';
-        document.getElementById("seconds").innerHTML = '5';
-    });
+    newItem.appendChild(checkbox);
+    newItem.appendChild(text);
+    document.getElementById("todoList").appendChild(newItem)
 }

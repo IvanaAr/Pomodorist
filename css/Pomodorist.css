@@ -80,3 +80,20 @@
 
                                 background-size: cover;
                             }
+
+                            #addbtn {
+
+
+                                background: #d9d9d9;
+                                color: #555;
+
+                                text-align: center;
+                                font-size: 16px;
+                                cursor: pointer;
+                                transition: 0.3s;
+                                color: black;
+                            }
+
+
+
+                            h2 {}
