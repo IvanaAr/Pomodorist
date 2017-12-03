@@ -1,10 +1,11 @@
 //funkcija za tajmer
 var intervalId = null;
-var minute = 25; //kasnije podesiti minute na 25
+var minutes = 25; //kasnije podesiti minute na 25
 var seconds = 00;
 var totalSeconds = 1500; //kasnije podesiti minute na 1500
 var type = 1;
 var started = 0;
+
 
 
 function startTimer() {
@@ -17,23 +18,26 @@ function startTimer() {
         if (type == 0) {
             totalSeconds = 1500;
             type = type + 1;
-            document.getElementById("myUL").innerHTML = "Break started";
+            document.getElementById("work-break").innerHTML = "Work";
 
         } else {
             totalSeconds = 300;
             type = type - 1;
-            document.getElementById("myUL").innerHTML = "Break ended";
+            document.getElementById("work-break").innerHTML = "Break";
 
         }
     }
 
+    function play() {
 
-    minute = Math.floor(totalSeconds / 60);
-    seconds = totalSeconds - (minute * 60);
+    }
+
+    minutes = Math.floor(totalSeconds / 60);
+    seconds = totalSeconds - (minutes * 60);
 
 
 
-    document.getElementById("minute").innerHTML = minute;
+    document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 }
 
@@ -43,7 +47,7 @@ function startTimer() {
 document.getElementById('start-btn').addEventListener('click', () => {
     if (started == 0) {
         started = 1;
-        intervalId = setInterval(startTimer, 10);
+        intervalId = setInterval(startTimer, 1000);
     }
 
 })
@@ -60,7 +64,7 @@ document.getElementById('reset-btn').addEventListener('click', () => {
     clearInterval(intervalId);
     totalSeconds = 1500; //podesiti sekunde na 1500
     type = 1;
-    document.getElementById("minute").innerHTML = '25';
+    document.getElementById("minutes").innerHTML = '25';
     document.getElementById("seconds").innerHTML = '00';
 });
 

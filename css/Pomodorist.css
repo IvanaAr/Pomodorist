@@ -1,99 +1,125 @@
-                            #title {
-                                color: white;
-                                position: ;
-                                left: 50px;
-                                top: 35px;
-                            }
+                                #title {
 
-                            #start-btn {
-
-
-                                background-color: #FFB6C1;
-                                margin-bottom: 10%;
-                                margin-right: 110px;
-                                margin-left: 10px;
-                            }
+                                    font-family: Papyrus, fantasy;
+                                    font-size: 50px;
+                                    font-style: normal;
+                                    font-variant: normal;
+                                    font-weight: 560;
+                                    line-height: 20.4px;
+                                    color: white;
 
 
-                            #stop-btn {
+                                    left: 50px;
+                                    top: 35px;
+                                }
+
+                                #start-btn {
 
 
-
-                                background-color: #FFB6C1;
-                                margin-bottom: 10%;
-                            }
-
-                            #reset-btn {
-
-                                background-color: #FFB6C1;
-                                margin-bottom: 10%;
-                                margin-left: 100px;
-                            }
+                                    background-color: #6495ED;
+                                    margin-bottom: 10%;
+                                    margin-right: 110px;
+                                    margin-left: 10px;
+                                    color: white;
+                                }
 
 
-                            .wrapper {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            }
-
-                            #Pomodoro {
-                                max-height: 100%;
-                                max-width: 100%;
-                                padding-top: 50px;
-                                margin-bottom: 50%;
-                                height: 400px;
-                                width: 400px;
-
-                                box-shadow: 10px 10px 50px 5px #FFE4E1;
-                            }
-
-                            #color {
-                                background: #D3D3D3;
-                                opacity: 4.0;
-                                height: auto;
-                                width: 400px;
-                            }
-
-                            h1 {
-                                font: 50px/1.5 'Pacifico', Helvetica, sans-serif;
-                                color: #fff;
-                                text-align: center;
-                                justify-content: center;
-                                padding-bottom: 40px;
-                            }
-
-                            #circle {
-                                position: flex;
-                                text-align: center;
-                                justify-content: center;
-                                padding-top: 10px;
-                                font: 50px/1.5 'Pacifico', Helvetica, sans-serif;
-                                color: #FFE4E1;
-                                text-align: center;
-                                justify-content: center;
-                                padding-bottom: 40px;
-                            }
-
-                            body {
-
-
-                                background-size: cover;
-                            }
-
-                            #addbtn {
-
-
-                                background: #d9d9d9;
-                                color: #555;
-
-                                text-align: center;
-                                font-size: 16px;
-                                cursor: pointer;
-                                transition: 0.3s;
-                                color: black;
-                            }
+                                #stop-btn {
 
 
 
-                            h2 {}
+                                    background-color: #6495ED;
+                                    margin-bottom: 10%;
+                                    color: white;
+                                }
+
+                                #reset-btn {
+
+                                    background-color: #6495ED;
+                                    margin-bottom: 10%;
+                                    margin-left: 100px;
+                                    color: white;
+                                }
+
+
+                                .wrapper {
+
+                                    display: flex;
+                                    align-items: left;
+                                    justify-content: left;
+                                    margin-left: 100px;
+                                }
+
+                                #Pomodoro {
+                                    max-height: 100%;
+                                    max-width: 100%;
+                                    padding-top: 50px;
+                                    margin-bottom: 50%;
+                                    height: 250px;
+                                    width: 250px;
+                                }
+
+                                #color {
+                                    background: #D3D3D3;
+
+                                    width: 400px;
+                                }
+
+                                h1 {
+                                    font: 50px/1.5 'Pacifico', Helvetica, sans-serif;
+                                    color: #fff;
+                                    text-align: center;
+                                    justify-content: center;
+                                    padding-bottom: 40px;
+                                }
+
+                                #circle {
+                                    position: flex;
+
+                                    font: 50px/1.5 'Pacifico',
+                                    Helvetica,
+                                    sans-serif;
+                                    color: #FFE4E1;
+                                    text-align: center;
+                                    justify-content: center;
+                                    padding-bottom: 40px;
+                                }
+
+                                body {
+
+
+                                    background-size: cover;
+                                }
+
+                                #addbtn {
+                                    text-align: center;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                    transition: 0.3s;
+                                    color: black;
+                                    background-color: #6495ED;
+                                    color: white;
+                                }
+
+
+
+                                h2 {
+                                    text-align: center;
+                                    font-family: Papyrus, fantasy;
+                                    font-size: 24px;
+                                    font-style: normal;
+                                    font-variant: normal;
+                                    font-weight: 500;
+                                    line-height: 26.4px;
+                                }
+
+                                #work-break {
+                                    font-family: Papyrus, fantasy;
+                                    font-size: 24px;
+                                    font-style: normal;
+                                    font-variant: normal;
+                                    font-weight: 500;
+                                    line-height: 26.4px;
+                                    color: red;
+                                    text-align: center;
+                                }
