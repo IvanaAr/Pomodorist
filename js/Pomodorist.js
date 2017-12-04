@@ -83,8 +83,12 @@ function newElement() {
     checkbox.name = "name";
     checkbox.value = "value";
     var newItem = document.createElement("div");
-
-    newItem.appendChild(checkbox);
-    newItem.appendChild(text);
-    document.getElementById("todoList").appendChild(newItem)
+    var inputValue = document.getElementById("todoInput").value;
+    if (inputValue === '') {
+        alert("Please write something!");
+    } else {
+        newItem.appendChild(checkbox);
+        newItem.appendChild(text);
+        document.getElementById("todoList").appendChild(newItem)
+    }
 }
