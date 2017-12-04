@@ -2,13 +2,8 @@
 
                                     font-family: Papyrus, fantasy;
                                     font-size: 50px;
-                                    font-style: normal;
-                                    font-variant: normal;
                                     font-weight: 560;
-                                    line-height: 20.4px;
                                     color: white;
-
-
                                     left: 50px;
                                     top: 35px;
                                 }
@@ -40,7 +35,6 @@
                                     margin-left: 100px;
                                     color: white;
                                 }
-
 
                                 .wrapper {
 
@@ -76,7 +70,7 @@
                                 #circle {
                                     position: flex;
 
-                                    font: 50px/1.5 'Pacifico',
+                                    font: 60px/1.5 'Pacifico',
                                     Helvetica,
                                     sans-serif;
                                     color: #FFE4E1;

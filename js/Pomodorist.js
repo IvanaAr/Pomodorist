@@ -14,16 +14,17 @@ function startTimer() {
 
     --totalSeconds;
 
+
     if (totalSeconds == 0) {
         if (type == 0) {
             totalSeconds = 1500;
             type = type + 1;
-            document.getElementById("work-break").innerHTML = "Work";
+            document.getElementById("work-break").innerHTML = "Work!";
 
         } else {
             totalSeconds = 300;
             type = type - 1;
-            document.getElementById("work-break").innerHTML = "Break";
+            document.getElementById("work-break").innerHTML = "Rest!";
 
         }
     }
@@ -43,11 +44,11 @@ function startTimer() {
 
 
 
-
 document.getElementById('start-btn').addEventListener('click', () => {
     if (started == 0) {
         started = 1;
-        intervalId = setInterval(startTimer, 1000);
+        intervalId = setInterval(startTimer, 10);
+        document.getElementById("work-break").innerHTML = "Work!";
     }
 
 })
@@ -57,6 +58,8 @@ document.getElementById('stop-btn').addEventListener('click', () => {
     if (intervalId && started == 1)
         started = 0;
     clearInterval(intervalId);
+    document.getElementById("work-break").innerHTML = "Your pomodoro timer is stopped, please start it again or reset!";
+
 });
 
 
@@ -67,6 +70,7 @@ document.getElementById('reset-btn').addEventListener('click', () => {
     started = 0;
     document.getElementById("minutes").innerHTML = '25';
     document.getElementById("seconds").innerHTML = '00';
+    document.getElementById("work-break").innerHTML = "Your pomodoro timer is reset, please start it again!";
 });
 
 
