@@ -47,7 +47,7 @@ function startTimer() {
 document.getElementById('start-btn').addEventListener('click', () => {
     if (started == 0) {
         started = 1;
-        intervalId = setInterval(startTimer, 10);
+        intervalId = setInterval(startTimer, 1000);
         document.getElementById("work-break").innerHTML = "Work!";
     }
 
