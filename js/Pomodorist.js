@@ -64,6 +64,7 @@ document.getElementById('reset-btn').addEventListener('click', () => {
     clearInterval(intervalId);
     totalSeconds = 1500; //podesiti sekunde na 1500
     type = 1;
+    started = 0;
     document.getElementById("minutes").innerHTML = '25';
     document.getElementById("seconds").innerHTML = '00';
 });
